@@ -7,10 +7,11 @@ import org.springframework.web.bind.annotation.*
 
 @CrossOrigin(origins= ["http://localhost:3000"])
 @RestController
+@RequestMapping("books")
 class BookController(private val bookService: BookService) {
 
     @RequestMapping("/")
-    fun index(): String = "Hola"
+    fun index(): String = "Chequeo que el controller funcione correctamente"
 
     @PostMapping("/new")
     fun create(@RequestBody book: Book) = bookService.create(book)
@@ -20,7 +21,6 @@ class BookController(private val bookService: BookService) {
 
     @GetMapping("/books")
     fun findAllBooks() = bookService.findAll()
-
 
     @GetMapping("/name/{name}")
     fun findAllBooks(@PathVariable name: String) = bookService.findByName(name)
