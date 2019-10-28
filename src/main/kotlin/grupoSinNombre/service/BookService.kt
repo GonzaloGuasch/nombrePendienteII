@@ -12,4 +12,6 @@ class BookService(private val bookRepository: BookRepository) {
     fun create(book: Book) = bookRepository.save(book)
 
     fun findById(id: Long) = bookRepository.findById(id)
+
+    fun findAll() = bookRepository.findAll()
 }
