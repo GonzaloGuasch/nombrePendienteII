@@ -20,4 +20,8 @@ class BookController(private val bookService: BookService) {
 
     @GetMapping("/books")
     fun findAllBooks() = bookService.findAll()
+
+
+    @GetMapping("/name/{name}")
+    fun findAllBooks(@PathVariable name: String) = bookService.findByName(name)
 }

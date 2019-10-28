@@ -59,4 +59,15 @@ class BooksApplicationTests {
 		assert(books.contains(aBook1))
 		assertEquals(2, books.count())
 	}
+
+	@org.junit.jupiter.api.Test
+	fun test3__when_search_a__book_by_name_should_return_it(){
+		var book = bookRepository.findByName("Prueba0")
+		assertEquals(1, book.id)
+		assertEquals("Prueba0", book.name)
+		assertEquals("L", book.authorName)
+		assertEquals(0, book.releaseYear)
+		assertEquals(1, book.amountOfPages)
+		assertEquals(2, book.priceInPesos)
+	}
 }
