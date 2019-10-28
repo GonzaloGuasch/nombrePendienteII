@@ -5,6 +5,7 @@ import grupoSinNombre.model.Book
 import org.springframework.stereotype.Controller
 import org.springframework.web.bind.annotation.*
 
+@CrossOrigin(origins= ["http://localhost:3000"])
 @RestController
 class BookController(private val bookService: BookService) {
 
