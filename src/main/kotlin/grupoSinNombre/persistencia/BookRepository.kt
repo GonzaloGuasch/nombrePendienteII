@@ -10,5 +10,5 @@ import org.springframework.stereotype.Repository
 interface BookRepository: CrudRepository<Book, Long> {
 
     @Query("SELECT * FROM book WHERE name = :aName", nativeQuery = true)
-    fun findByName(@Param("aName") aName : String): Book
+    fun findByName(@Param("aName") aName : String): Book?
 }
