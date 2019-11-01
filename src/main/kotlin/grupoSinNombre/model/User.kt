@@ -1,22 +1,19 @@
 package grupoSinNombre.model
 
 import java.time.LocalDate
-import javax.persistence.Entity
-import javax.persistence.GeneratedValue
-import javax.persistence.Id
-import javax.persistence.ManyToMany
+import javax.persistence.*
 
 @Entity
 class User(
         var userName: String,
         var email: String,
         var birthday_date: LocalDate,
-        @ManyToMany
+        @ManyToMany(fetch = FetchType.EAGER)
         var wishlist: MutableSet<Book> = mutableSetOf(),
-        @ManyToMany
-        var orderhistory: MutableSet<Book> = mutableSetOf(),
+       @ManyToMany
+       var orderhistory: MutableSet<Book> = mutableSetOf(),
         @Id @GeneratedValue
-        var id: Long
+        var id: Long = 0
 ){
 
     fun addBookToWishList(aBook: Book) {  this.wishlist.add(aBook) }
