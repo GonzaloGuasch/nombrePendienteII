@@ -11,4 +11,7 @@ interface BookRepository: CrudRepository<Book, Long> {
 
     @Query("SELECT * FROM book WHERE name = :aName", nativeQuery = true)
     fun findByName(@Param("aName") aName : String): Book?
+
+    @Query("SELECT * FROM book WHERE authorName = :anAuthorName", nativeQuery = true)
+    fun findByAuthorName(anAuthorName: String)
 }

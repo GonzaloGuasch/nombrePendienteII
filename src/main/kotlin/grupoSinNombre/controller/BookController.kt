@@ -24,4 +24,7 @@ class BookController(private val bookService: BookService) {
 
     @GetMapping("/name/{name}")
     fun findAllBooks(@PathVariable name: String) = bookService.findByName(name)
+
+    @GetMapping("/author/{author_name}")
+    fun findBookByAuthor(@PathVariable author_name: String) = bookService.findByAuthorName(author_name)
 }

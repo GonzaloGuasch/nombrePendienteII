@@ -24,8 +24,9 @@ import org.springframework.test.context.web.WebAppConfiguration
 @SpringBootTest(classes = arrayOf(BooksApplication::class),
 webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 class BooksApplicationTests {
-	var aBook0 = Book("Prueba0", "L",0,1, 2)
-	var aBook1 = Book("Prueba1", "H", 0, 1, 2)
+	var genders = mutableListOf<String>()
+	var aBook0 = Book("Prueba0", "L",genders,0,1, 2)
+	var aBook1 = Book("Prueba1", "H",genders, 0, 1, 2)
 
 	@Autowired
 	lateinit var bookRepository: BookRepository
@@ -64,7 +65,7 @@ class BooksApplicationTests {
 	@org.junit.jupiter.api.Test
 	fun test3__when_save_a_lot_of_books_repository_should_return_them(){
 		var books = bookRepository.findAll()
-		var otherBook = Book("", "", 0, 1, 2)
+		var otherBook = Book("", "", genders,0, 1, 2)
 		assert(books.contains(aBook0))
 		assert(books.contains(aBook1))
 		assertFalse(books.contains(otherBook))

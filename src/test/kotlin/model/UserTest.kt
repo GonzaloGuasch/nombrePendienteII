@@ -16,7 +16,7 @@ class UserTest{
 
         Assert.assertEquals("Alfredo", aUser.userName)
         Assert.assertEquals("alfredo@gmail.com", aUser.email)
-        Assert.assertEquals("2019-10-28", aUser.birthday_date.toString())
+        Assert.assertEquals("2019-11-01", aUser.birthday_date.toString())
 
         Assert.assertEquals(mutableSetOf<Book>(), aUser.wishlist)
         //Assert.assertEquals(mutableSetOf<Book>(), aUser.orderhistory)
@@ -26,7 +26,7 @@ class UserTest{
     @Test
     fun an_user_can_add_a_book_to_his_wishlist(){
         val aUser = User("albreto", "alberto@gmail.com", LocalDate.now())
-        val aBook = Book("It", "Stephen King", 1986, 1138, 1000)
+        val aBook = Book("It", "Stephen King", mutableListOf<String>(), 1986, 1138, 1000)
 
         aUser.addBookToWishList(aBook)
 
@@ -35,7 +35,7 @@ class UserTest{
     @Test
     fun an_user_cannot_add_twice_the_same_book_to_his_wishlist(){
         val aUser = User("albreto", "alberto@gmail.com", LocalDate.now())
-        val aBook = Book("It", "Stephen King", 1986, 1138, 1000)
+        val aBook = Book("It", "Stephen King", mutableListOf<String>(), 1986, 1138, 1000)
 
         aUser.addBookToWishList(aBook)
         aUser.addBookToWishList(aBook)
@@ -53,7 +53,7 @@ class UserTest{
     @Test
     fun an_user_can_know_how_much_money_has_in_the_wishlist_with_one_book(){
         val aUser = User("albreto", "alberto@gmail.com", LocalDate.now())
-        val aBook = Book("It", "Stephen King", 1986, 1138, 1000)
+        val aBook = Book("It", "Stephen King", mutableListOf<String>(), 1986, 1138, 1000)
 
         aUser.addBookToWishList(aBook)
 

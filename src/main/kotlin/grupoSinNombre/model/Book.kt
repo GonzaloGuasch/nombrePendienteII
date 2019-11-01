@@ -8,6 +8,7 @@ import javax.persistence.Id
 class Book(
         var name: String,
         var authorName: String,
+        val genders: MutableList<String>,
         var releaseYear: Int,
         var amountOfPages: Int,
         var priceInPesos: Int,
