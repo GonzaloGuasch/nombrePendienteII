@@ -10,7 +10,7 @@ class User(
         var birthday_date: LocalDate,
         @ManyToMany(fetch = FetchType.EAGER)
         var wishlist: MutableSet<Book> = mutableSetOf(),
-       @ManyToMany
+        @ManyToMany
        var orderhistory: MutableSet<Book> = mutableSetOf(),
         @Id @GeneratedValue
         var id: Long = 0
