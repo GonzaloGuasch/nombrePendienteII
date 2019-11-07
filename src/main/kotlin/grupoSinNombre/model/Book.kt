@@ -5,7 +5,7 @@ import javax.persistence.GeneratedValue
 import javax.persistence.Id
 
 @Entity
-class Book(
+data class Book(
         var name: String,
         var authorName: String,
         var releaseYear: Int,
