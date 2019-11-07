@@ -63,12 +63,12 @@ class BooksApplicationTests {
 
 	@org.junit.jupiter.api.Test
 	fun test3__when_save_a_lot_of_books_repository_should_return_them(){
-		var books = bookRepository.findAll()
+		var name_books = bookRepository.findAll().map{book -> book.name}
 		var otherBook = Book("", "", 0, 1, 2)
-		assert(books.contains(aBook0))
-		assert(books.contains(aBook1))
-		assertFalse(books.contains(otherBook))
-		assertEquals(2, books.count())
+		assert(name_books.contains(aBook0.name))
+		assert(name_books.contains(aBook1.name))
+		assertFalse(name_books.contains(otherBook.name))
+		assertEquals(2, name_books.count())
 	}
 
 	@org.junit.jupiter.api.Test
