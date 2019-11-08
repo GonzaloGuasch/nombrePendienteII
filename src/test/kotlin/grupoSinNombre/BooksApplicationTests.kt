@@ -3,6 +3,7 @@ package grupoSinNombere
 import grupoSinNombre.BooksApplication
 import grupoSinNombre.controller.BookController
 import grupoSinNombre.model.Book
+import grupoSinNombre.model.Genre
 import grupoSinNombre.persistencia.BookRepository
 import grupoSinNombre.service.BookService
 import junit.framework.Assert.assertEquals
@@ -24,8 +25,8 @@ import org.springframework.test.context.web.WebAppConfiguration
 @SpringBootTest(classes = arrayOf(BooksApplication::class),
 webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 class BooksApplicationTests {
-	var aBook0 = Book("Prueba0", "L",0,1, 2)
-	var aBook1 = Book("Prueba1", "H", 0, 1, 2)
+	var aBook0 = Book("Prueba0", "L", Genre.PINKNOVEL,0,1, 2)
+	var aBook1 = Book("Prueba1", "H", Genre.DYSTOPIAN,0, 1, 2)
 
 	@Autowired
 	lateinit var bookRepository: BookRepository
@@ -64,7 +65,7 @@ class BooksApplicationTests {
 	@org.junit.jupiter.api.Test
 	fun test3__when_save_a_lot_of_books_repository_should_return_them(){
 		var name_books = bookRepository.findAll().map{book -> book.name}
-		var otherBook = Book("", "", 0, 1, 2)
+		var otherBook = Book("", "", Genre.DRAMA,0, 1, 2)
 		assert(name_books.contains(aBook0.name))
 		assert(name_books.contains(aBook1.name))
 		assertFalse(name_books.contains(otherBook.name))
