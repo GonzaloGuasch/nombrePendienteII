@@ -8,6 +8,7 @@ import javax.persistence.Id
 data class Book(
         var name: String,
         var authorName: String,
+        var genre : Genre = Genre.STORY,
         var releaseYear: Int,
         var amountOfPages: Int,
         var priceInPesos: Int,
