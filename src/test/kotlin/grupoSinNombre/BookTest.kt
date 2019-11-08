@@ -12,7 +12,7 @@ class BookTest {
         val aBook = Book("Tokio blues", "Murakami", Genre.PINKNOVEL, 1987, 454, 100)
         Assert.assertEquals("Tokio blues", aBook.name)
         Assert.assertEquals("Murakami", aBook.authorName)
-        Assert.assertEquals("Novela rosa", aBook.genre)
+        Assert.assertEquals("PINKNOVEL", aBook.genre.name.toString())
     }
 
 }
