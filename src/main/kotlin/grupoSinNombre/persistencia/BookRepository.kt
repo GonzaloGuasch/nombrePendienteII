@@ -16,4 +16,5 @@ interface BookRepository: CrudRepository<Book, Long> {
     @Transactional
     @Query("SELECT * FROM book WHERE lower(author_name) = :anAuthorName", nativeQuery = true)
     fun findByAuthorName(anAuthorName: String) : MutableList<Book>
+
 }

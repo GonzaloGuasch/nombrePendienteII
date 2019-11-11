@@ -28,6 +28,7 @@ class BooksApplicationTests {
 	var aBook0 = Book("Prueba0", "L2", Genre.PINKNOVEL,0,1, 2)
 	var aBook1 = Book("Prueba1", "H2", Genre.DYSTOPIAN,0, 1, 2)
 
+
 	@Autowired
 	lateinit var bookRepository: BookRepository
 
@@ -70,6 +71,7 @@ class BooksApplicationTests {
 		assert(name_books.contains(aBook1.name))
 		assertFalse(name_books.contains(otherBook.name))
 		assertEquals(2, name_books.count())
+
 	}
 
 	@org.junit.jupiter.api.Test

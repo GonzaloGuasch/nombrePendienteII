@@ -17,5 +17,6 @@ class BookService(private val bookRepository: BookRepository) {
 
     fun findByName(name : String) = bookRepository.findByName(name)
 
-    fun findByAuthorName(name : String) = bookRepository.findByAuthorName(name)
+    fun findByAuthorName(authorName: String) = bookRepository.findByAuthorName(authorName)
+
 }
