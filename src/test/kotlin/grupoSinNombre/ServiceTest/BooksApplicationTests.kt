@@ -3,6 +3,7 @@ package grupoSinNombere
 import grupoSinNombre.BooksApplication
 import grupoSinNombre.controller.BookController
 import grupoSinNombre.model.Book
+import grupoSinNombre.model.Genre
 import grupoSinNombre.persistencia.BookRepository
 import grupoSinNombre.service.BookService
 import junit.framework.Assert.assertEquals
@@ -24,9 +25,9 @@ import org.springframework.test.context.web.WebAppConfiguration
 @SpringBootTest(classes = arrayOf(BooksApplication::class),
 webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 class BooksApplicationTests {
-	var genders = mutableListOf<String>()
-	var aBook0 = Book("Prueba0", "L",genders,0,1, 2)
-	var aBook1 = Book("Prueba1", "H",genders, 0, 1, 2)
+	var aBook0 = Book("Prueba0", "L2", Genre.PINKNOVEL,0,1, 2)
+	var aBook1 = Book("Prueba1", "H2", Genre.DYSTOPIAN,0, 1, 2)
+
 
 	@Autowired
 	lateinit var bookRepository: BookRepository
@@ -50,7 +51,7 @@ class BooksApplicationTests {
 		var otherBook = bookRepository.findById(1)
 		assertEquals(1, otherBook.get().id)
 		assertEquals("Prueba0", otherBook.get().name)
-		assertEquals("L", otherBook.get().authorName)
+		assertEquals("L2", otherBook.get().authorName)
 		assertEquals(0, otherBook.get().releaseYear)
 		assertEquals(1, otherBook.get().amountOfPages)
 		assertEquals(2, otherBook.get().priceInPesos)
@@ -64,12 +65,13 @@ class BooksApplicationTests {
 
 	@org.junit.jupiter.api.Test
 	fun test3__when_save_a_lot_of_books_repository_should_return_them(){
-		var books = bookRepository.findAll()
-		var otherBook = Book("", "", genders,0, 1, 2)
-		assert(books.contains(aBook0))
-		assert(books.contains(aBook1))
-		assertFalse(books.contains(otherBook))
-		assertEquals(2, books.count())
+		var name_books = bookRepository.findAll().map{book -> book.name}
+		var otherBook = Book("", "", Genre.DRAMA,0, 1, 2)
+		assert(name_books.contains(aBook0.name))
+		assert(name_books.contains(aBook1.name))
+		assertFalse(name_books.contains(otherBook.name))
+		assertEquals(2, name_books.count())
+
 	}
 
 	@org.junit.jupiter.api.Test
@@ -77,7 +79,7 @@ class BooksApplicationTests {
 		var book = bookRepository.findByName("Prueba0")
 		assertEquals(1, book!!.id)
 		assertEquals("Prueba0", book!!.name)
-		assertEquals("L", book!!.authorName)
+		assertEquals("L2", book!!.authorName)
 		assertEquals(0, book!!.releaseYear)
 		assertEquals(1, book!!.amountOfPages)
 		assertEquals(2, book!!.priceInPesos)

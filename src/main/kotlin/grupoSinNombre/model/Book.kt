@@ -6,11 +6,10 @@ import javax.persistence.Id
 import javax.persistence.ManyToMany
 
 @Entity
-class Book(
+data class Book(
         var name: String,
         var authorName: String,
-        @ManyToMany(mappedBy = "user")
-        val genders: MutableList<String>,
+        var genre : Genre = Genre.STORY,
         var releaseYear: Int,
         var amountOfPages: Int,
         var priceInPesos: Int,
