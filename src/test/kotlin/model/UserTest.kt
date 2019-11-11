@@ -17,7 +17,7 @@ class UserTest{
 
         Assert.assertEquals("Alfredo", aUser.userName)
         Assert.assertEquals("alfredo@gmail.com", aUser.email)
-        Assert.assertEquals("2019-11-01", aUser.birthday_date.toString())
+        Assert.assertEquals(LocalDate.now().toString(), aUser.birthday_date.toString())
 
         Assert.assertEquals(mutableSetOf<Book>(), aUser.wishlist)
         //Assert.assertEquals(mutableSetOf<Book>(), aUser.orderhistory)

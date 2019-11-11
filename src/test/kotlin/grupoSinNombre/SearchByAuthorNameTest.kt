@@ -21,8 +21,10 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner
 import org.springframework.test.context.junit4.SpringRunner
 import org.springframework.test.context.web.WebAppConfiguration
 
-@RunWith(SpringJUnit4ClassRunner::class)
-@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+
+@RunWith(SpringRunner::class)
+@SpringBootTest(classes = arrayOf(BooksApplication::class),
+webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 class SearchByAuthorNameTest {
 	var aBook0 = Book("Prueba0", "L", Genre.PINKNOVEL,0,1, 2)
 	var aBook1 = Book("Prueba1", "L", Genre.PINKNOVEL,0,1, 2)

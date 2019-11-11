@@ -13,7 +13,6 @@ interface BookRepository: CrudRepository<Book, Long> {
     @Query("SELECT * FROM book WHERE name = :aName", nativeQuery = true)
     fun findByName(@Param("aName") aName : String): Book?
 
-    @Transactional
     @Query("SELECT * FROM book WHERE lower(author_name) = :anAuthorName", nativeQuery = true)
     fun findByAuthorName(anAuthorName: String) : MutableList<Book>
 
