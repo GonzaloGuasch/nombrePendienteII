@@ -10,6 +10,6 @@ import org.springframework.stereotype.Repository
 @Repository
 interface UserRepository: CrudRepository<User, Long> {
 
-    @Query("SELECT * FROM user WHERE userName = :userName", nativeQuery = true)
+    @Query("SELECT * FROM user WHERE user_name = :userName", nativeQuery = true)
     fun findByName(@Param("userName") userName : String): User
 }

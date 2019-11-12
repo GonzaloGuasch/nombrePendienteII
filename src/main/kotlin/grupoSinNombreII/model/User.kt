@@ -13,4 +13,8 @@ class User(
         var wishlist: MutableSet<Book> = mutableSetOf(),
         @Id @GeneratedValue
         var id: Long = 0
-)
+) {
+    fun addBookToWishList(book: Book) {
+        this.wishlist.add(book)
+    }
+}

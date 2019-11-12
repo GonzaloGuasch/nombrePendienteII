@@ -1,5 +1,6 @@
 package grupoSinNombreII.controller
 
+import grupoSinNombreII.model.Book
 import grupoSinNombreII.model.User
 import grupoSinNombreII.service.UserService
 import org.springframework.web.bind.annotation.*
@@ -23,5 +24,8 @@ class UserController(var userService: UserService) {
 
     @GetMapping("/userName/{name}")
     fun findByName(@PathVariable name: String) = userService.findByName(name)
+
+    @PostMapping("/addToWishList/{userName}/{bookName}")
+    fun addBookToWishList(@PathVariable bookName: String, @PathVariable userName: String)= userService.addBookToWishList(userName, bookName)
 
 }

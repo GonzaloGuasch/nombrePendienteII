@@ -2,12 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="511a85f1-fa66-4de3-beda-967562622412" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/grupoSinNombreII/controller/UserController.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/grupoSinNombreII/model/User.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/grupoSinNombreII/controller/UserController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/grupoSinNombreII/controller/UserController.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/grupoSinNombreII/model/User.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/grupoSinNombreII/model/User.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/grupoSinNombreII/repository/BookRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/grupoSinNombreII/repository/BookRepository.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/grupoSinNombreII/repository/UserRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/grupoSinNombreII/repository/UserRepository.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/grupoSinNombreII/service/UserService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/grupoSinNombreII/service/UserService.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/grupoSinNombreII/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/grupoSinNombreII/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/grupoSinNombreII/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/grupoSinNombreII/model/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/grupoSinNombreII/repository/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/grupoSinNombreII/repository/UserRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/grupoSinNombreII/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/grupoSinNombreII/service/UserService.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,6 +40,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="restartRequiresConfirmation" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
@@ -87,7 +92,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1573555138886</updated>
-      <workItem from="1573555145115" duration="4833000" />
+      <workItem from="1573555145115" duration="6929000" />
     </task>
     <servers />
   </component>
