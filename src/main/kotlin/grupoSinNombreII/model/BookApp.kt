@@ -20,11 +20,8 @@ class BookApp(
         var res = false
         this.registedUsers.map {user -> res = user.userName == userName &&
                                               user.password == userPassword }
-        if(!res){
-            throw Exception("Check your password or your user name")
-        }else{
-            return res
-        }
+
+        return res
     }
 
 }
