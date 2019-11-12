@@ -12,9 +12,13 @@ class User(
         @ManyToMany(cascade = [CascadeType.ALL], mappedBy = "id")
         var wishlist: MutableSet<Book> = mutableSetOf(),
         @Id @GeneratedValue
-        var id: Long = 0
+        var id: Long = 0,
+        var password: String?
 ) {
     fun addBookToWishList(book: Book) {
         this.wishlist.add(book)
+    }
+    fun setPassWord(newPassword: String){
+        this.password = newPassword
     }
 }

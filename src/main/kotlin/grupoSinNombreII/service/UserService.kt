@@ -17,10 +17,7 @@ class UserService(private val userRepository: UserRepository,
     fun findAll() = userRepository.findAll()
     fun findByName(userName: String) = userRepository.findByName(userName)
     fun addBookToWishList(name: String, bookName: String) {
-        println(name)
-        println(bookName)
         val book = bookService.findByName(bookName)
-        println(book)
         userRepository.findByName(name).addBookToWishList(book!!)
     }
 
