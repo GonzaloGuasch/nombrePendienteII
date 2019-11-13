@@ -14,4 +14,16 @@ class BookService(var bookRepository: BookRepository) {
     fun findAll() = bookRepository.findAll()
 
     fun findByName(name : String) = bookRepository.findByName(name)
+
+    fun upVoteBook(id: Long) {
+       var recoverBook = this.findById(id).get();
+        recoverBook.upVote();
+        this.create(recoverBook);
+    }
+
+    fun downVoteBook(id: Long) {
+        var recoverBook = this.findById(id).get();
+        recoverBook.downVote();
+        this.create(recoverBook);
+    }
 }

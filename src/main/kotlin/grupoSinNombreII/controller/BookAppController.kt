@@ -20,5 +20,6 @@ class BookAppController(var bookAppService: BookAppService) {
     fun canLogin(@RequestBody loginWrapper: LoginWrapper) = bookAppService.canLogin(this.bookApp, loginWrapper)
 
     @PostMapping("/register")
+    @ResponseBody
     fun register(@RequestBody registerWrapper: RegisterWrapper) = bookAppService.register(this.bookApp, registerWrapper)
 }

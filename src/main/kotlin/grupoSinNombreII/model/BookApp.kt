@@ -11,9 +11,11 @@ class BookApp(
 ) {
 
     fun amountOfUsers(): Int = registedUsers.size
-    fun registerUser(newUser: User, password: String) {
+    fun registerUser(newUser: User, password: String): Int {
        newUser.setPassWord(password)
         this.registedUsers.add(newUser)
+
+        return 200
     }
 
     fun logInUser(userName: String, userPassword: String): Boolean {

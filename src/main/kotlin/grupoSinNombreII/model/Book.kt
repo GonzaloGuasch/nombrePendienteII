@@ -11,6 +11,15 @@ class Book(
         var releaseYear: Int,
         var amountOfPages: Int,
         var priceInPesos: Int,
+        var votes: Int = 0,
         @Id @GeneratedValue
         val id: Long = 0
-)
+) {
+        fun upVote() {
+                this.votes = this.votes + 1
+        }
+
+        fun downVote() {
+                this.votes = this.votes - 1
+        }
+}

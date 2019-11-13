@@ -21,4 +21,10 @@ class BookController(val bookService: BookService) {
 
     @GetMapping("/name/{name}")
     fun findAllBooks(@PathVariable name: String) = bookService.findByName(name)
+
+    @GetMapping("/upvote/{id}")
+    fun upvote(@PathVariable id: Long) = bookService.upVoteBook(id);
+
+    @GetMapping("/downvote/{id}")
+    fun downvote(@PathVariable id: Long) = bookService.downVoteBook(id);
 }

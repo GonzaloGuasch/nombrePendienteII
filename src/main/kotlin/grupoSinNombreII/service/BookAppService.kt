@@ -15,8 +15,8 @@ class BookAppService(var bookAppRepository: BookAppRepository){
        return bookApp.logInUser(loginWrapper.username!!, loginWrapper.password!!)
     }
 
-    fun register(bookApp: BookApp, registerWrapper: RegisterWrapper) {
+    fun register(bookApp: BookApp, registerWrapper: RegisterWrapper): Int {
         var newUser = User(registerWrapper.name!!, registerWrapper.email!!, registerWrapper.birth!!)
-        bookApp.registerUser(newUser, registerWrapper.password!!)
+       return bookApp.registerUser(newUser, registerWrapper.password!!)
     }
 }
