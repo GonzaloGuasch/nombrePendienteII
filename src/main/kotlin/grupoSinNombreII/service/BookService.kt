@@ -15,6 +15,8 @@ class BookService(var bookRepository: BookRepository) {
 
     fun findByName(name : String) = bookRepository.findByName(name)
 
+    fun findByAuthorName(name : String) = bookRepository.findByAuthorName(name.toLowerCase())
+
     fun upVoteBook(id: Long) {
        var recoverBook = this.findById(id).get();
         recoverBook.upVote();
