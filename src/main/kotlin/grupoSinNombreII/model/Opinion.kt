@@ -5,12 +5,12 @@ import javax.persistence.*
 
 @Entity
 @Table(name = "opinion")
-data class Opinion(@Column(name="id_user")
-                   @OneToMany(cascade = [CascadeType.ALL], mappedBy = "id")
-                   val id_user : MutableSet<User> = mutableSetOf(),
-                   @Column(name="id_book")
-                   @OneToMany(cascade = [CascadeType.ALL], mappedBy = "id")
-                   val id_book : MutableSet<Book> = mutableSetOf(),
+data class Opinion(@JoinColumn(name = "id_user", nullable = false)
+                   @ManyToOne(optional = false, cascade = [CascadeType.ALL], fetch = FetchType.EAGER)
+                   val user : User,
+                   @JoinColumn(name = "id_book", nullable = false)
+                   @ManyToOne(optional = false, cascade = [CascadeType.ALL], fetch = FetchType.EAGER)
+                   val book : Book,
                    var date : LocalDateTime = LocalDateTime.now(),
                    var msj: String,
                    @Id
