@@ -11,11 +11,10 @@ class BookApp(
 ) {
 
     fun amountOfUsers(): Int = registedUsers.size
-    fun registerUser(newUser: User, password: String): Int {
+    fun registerUser(newUser: User, password: String): User {
        newUser.setPassWord(password)
         this.registedUsers.add(newUser)
-
-        return 200
+        return newUser
     }
 
     fun logInUser(userName: String, userPassword: String): Boolean {
@@ -24,6 +23,10 @@ class BookApp(
                                               user.password == userPassword }
 
         return res
+    }
+
+    fun findUser(username: String): User {
+       return this.registedUsers.find { it.userName == username }!!
     }
 
 }

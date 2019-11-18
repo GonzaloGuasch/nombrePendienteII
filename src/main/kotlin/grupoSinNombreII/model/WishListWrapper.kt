@@ -1,5 +1,3 @@
 package grupoSinNombreII.model
 
-class WishListWrapper {
-
-}
+class WishListWrapper(val username: String, val bookName: String)

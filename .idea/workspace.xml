@@ -4,16 +4,14 @@
     <list default="true" id="511a85f1-fa66-4de3-beda-967562622412" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/grupoSinNombreII/controller/BookAppController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/grupoSinNombreII/controller/BookAppController.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/grupoSinNombreII/controller/BookController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/grupoSinNombreII/controller/BookController.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/grupoSinNombreII/model/Book.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/grupoSinNombreII/model/Book.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/grupoSinNombreII/model/BookApp.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/grupoSinNombreII/model/BookApp.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/grupoSinNombreII/model/User.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/grupoSinNombreII/model/User.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/grupoSinNombreII/model/WishListWrapper.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/grupoSinNombreII/model/WishListWrapper.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/grupoSinNombreII/service/BookAppService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/grupoSinNombreII/service/BookAppService.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/grupoSinNombreII/service/BookService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/grupoSinNombreII/service/BookService.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/grupoSinNombreII/controller/BookAppController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/grupoSinNombreII/controller/BookAppController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/grupoSinNombreII/controller/BookController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/grupoSinNombreII/controller/BookController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/grupoSinNombreII/model/BookApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/grupoSinNombreII/model/BookApp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/grupoSinNombreII/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/grupoSinNombreII/model/User.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/grupoSinNombreII/service/BookAppService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/grupoSinNombreII/service/BookAppService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/grupoSinNombreII/service/BookService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/grupoSinNombreII/service/BookService.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -51,6 +49,9 @@
       <recent name="grupoSinNombreII.repository" />
       <recent name="grupoSinNombreII.model" />
       <recent name="grupoSinNombreII.controller" />
+    </key>
+    <key name="CreateKotlinClassDialog.RecentsKey">
+      <recent name="grupoSinNombreII.model" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -96,7 +97,10 @@
       <option name="presentableId" value="Default" />
       <updated>1573555138886</updated>
       <workItem from="1573555145115" duration="11286000" />
-      <workItem from="1573643185342" duration="5779000" />
+      <workItem from="1573643185342" duration="6540000" />
+      <workItem from="1573669688164" duration="1161000" />
+      <workItem from="1573858625923" duration="2905000" />
+      <workItem from="1573928696737" duration="11054000" />
     </task>
     <servers />
   </component>
