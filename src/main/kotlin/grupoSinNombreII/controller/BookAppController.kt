@@ -3,6 +3,7 @@ package grupoSinNombreII.controller
 import grupoSinNombreII.model.BookApp
 import grupoSinNombreII.model.LoginWrapper
 import grupoSinNombreII.model.RegisterWrapper
+import grupoSinNombreII.model.WishListWrapper
 import grupoSinNombreII.service.BookAppService
 import org.springframework.web.bind.annotation.*
 
@@ -22,4 +23,7 @@ class BookAppController(var bookAppService: BookAppService) {
     @PostMapping("/register")
     @ResponseBody
     fun register(@RequestBody registerWrapper: RegisterWrapper) = bookAppService.register(this.bookApp, registerWrapper)
+
+    @PostMapping("/addToWishlist")
+    fun addToWishList(@RequestBody wishlistWrapper: WishListWrapper) = bookAppService.addToWishList(this.bookApp, wishlistWrapper)
 }
