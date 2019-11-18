@@ -9,6 +9,9 @@ import org.springframework.web.bind.annotation.RequestParam
 @Repository
 interface BookRepository: CrudRepository<Book, Long> {
 
-    @Query("SELECT * FROM book WHERE name = :aName", nativeQuery = true )
+    @Query("SELECT * FROM book WHERE lower(name) = :aName", nativeQuery = true )
     fun findByName(@RequestParam("aName") aName : String): Book?
+
+    @Query("SELECT * FROM book WHERE lower(author_name) = :anAuthorName", nativeQuery = true)
+    fun findByAuthorName(anAuthorName: String) : MutableList<Book>
 }
