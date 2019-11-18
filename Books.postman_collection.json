@@ -1,0 +1,1191 @@
+{
+	"info": {
+		"_postman_id": "7b8a0eb6-6b21-40c9-ae08-8f4457bdf403",
+		"name": "Books",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "addBook1",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Orgullo y prejucio\",\n\t\"authorName\": \"Jane Austen\",\n\t\"genre\": \"DRAMA\",\n    \"releaseYear\": 1813,\n    \"amountOfPages\": 569,\n    \"priceInPesos\": 758\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/new",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addBook2",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Don Quijote de la Mancha\",\n\t\"authorName\": \"Miguel de Cervantes\",\n\t\"genre\": \"DRAMA\",\n    \"releaseYear\": 1605,\n    \"amountOfPages\": 986,\n    \"priceInPesos\": 1350\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/new",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addBook3",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Guerra y paz\",\n\t\"authorName\": \"Guerra y paz\",\n\t\"genre\": \"DRAMA\",\n    \"releaseYear\": 1864,\n    \"amountOfPages\": 1225,\n    \"priceInPesos\": 999\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/new",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addBook4",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\t{\n\t\"name\": \"1984\",\n\t\"authorName\": \"George Orwell\",\n\t\"genre\": \"DYSTOPIAN\",\n    \"releaseYear\": 1949,\n    \"amountOfPages\": 338,\n    \"priceInPesos\": 420\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/new",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addBook5",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Lolita\",\n\t\"authorName\": \"Vladimir Nabokov\",\n\t\"genre\": \"DRAMA\",\n    \"releaseYear\": 1955,\n    \"amountOfPages\": 700,\n    \"priceInPesos\": 12\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/new",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addBook6",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"El gran Gatsby\",\n\t\"authorName\": \"El gran Gatsby\",\n\t\"genre\": \"DRAMA\",\n    \"releaseYear\": 1925,\n    \"amountOfPages\": 137,\n    \"priceInPesos\": 666\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/new",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addBook7",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Rayuela\",\n\t\"authorName\": \"El amigo Cortazar\",\n\t\"genre\": \"DRAMA\",\n    \"releaseYear\": 1963,\n    \"amountOfPages\": 910,\n    \"priceInPesos\": 1300\n\t\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/new",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addBook8",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Ficciones\",\n\t\"authorName\": \"El amigo Borges\",\n\t\"genre\": \"STORY\",\n    \"releaseYear\": 1944,\n    \"amountOfPages\": 173,\n    \"priceInPesos\": 101110\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/new",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addBook9",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"El señor de los anillos\",\n\t\"authorName\": \"J. R. R. Tolkien\",\n\t\"genre\": \"FANTASTIC\",\n    \"releaseYear\": 1925,\n    \"amountOfPages\": 1500,\n    \"priceInPesos\": 3200\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/new",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addBook10",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Diario de Ana Frank\",\n\t\"authorName\": \"Ana\",\n\t\"genre\":\"DRAMA\",\n    \"releaseYear\": 1942,\n    \"amountOfPages\": 217,\n    \"priceInPesos\": 785\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/new",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addBook11",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Gaturro 100 y la lucha diaria con la rutina\",\n\t\"authorName\": \"Nik\",\n\t\"genre\": \"DRAMA\",\n    \"releaseYear\": 2020,\n    \"amountOfPages\": 3890,\n    \"priceInPesos\": 10\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/new",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addBook12",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Gaturro 101 y la conquista comunista en cuba\",\n\t\"authorName\": \"Nik\",\n\t\"genre\": \"COMEDY\",\n    \"releaseYear\": 2021,\n    \"amountOfPages\": 6890,\n    \"priceInPesos\": 1\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/new",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addBook13",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Gaturro 102 y las mejores recetas de pollo al horno\",\n\t\"authorName\": \"Nik\",\n\t\"genre\": \"COMEDY\",\n    \"releaseYear\": 2022,\n    \"amountOfPages\": 12,\n    \"priceInPesos\": 3000\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/new",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addBook14",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n            \"name\": \"El guardian invisible\",\n            \"authorName\": \"Dolores Redondo\",\n            \"genre\":\"DETECTIVESTORY\",\n            \"releaseYear\":  2012,\n            \"amountOfPages\": 440,\n            \"priceInPesos\": 888\n       }"
+				},
+				"url": {
+					"raw": "localhost:8080/new",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addBook15",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n            \"name\": \"El guardian invisible\",\n            \"authorName\": \"Dolores Redondo\",\n            \"genre\":\"DETECTIVESTORY\",\n            \"releaseYear\":  2012,\n            \"amountOfPages\": 440,\n            \"priceInPesos\": 888\n       }"
+				},
+				"url": {
+					"raw": "localhost:8080/new",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addBook16",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n            \"name\": \"La naranja mecanica\",\n            \"authorName\": \"Anthony Burguess\",\n            \"genre\":\"DYSTOPIAN\"\n\t\t\t,\n            \"releaseYear\": 1962,\n            \"amountOfPages\": 204,\n            \"priceInPesos\": 999\n        }"
+				},
+				"url": {
+					"raw": "localhost:8080/new",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addBook17",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n            \"name\": \"Alguien volo sobre el nido del cuco\",\n            \"authorName\": \"Ken Kesey\",\n            \"genre\":\"DRAMA\",\n            \"releaseYear\": 1959,\n            \"amountOfPages\": 320,\n            \"priceInPesos\": 999\n        }"
+				},
+				"url": {
+					"raw": "localhost:8080/new",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addBook18",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n            \"name\": \"La Nausea\",\n            \"authorName\": \"Jean Paul Sartre\",\n            \"genre\":\"ESSAY\",\n            \"releaseYear\": 1044,\n            \"amountOfPages\": 364,\n            \"priceInPesos\": 1000\n        }"
+				},
+				"url": {
+					"raw": "localhost:8080/new",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addBook19",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n            \"name\": \"Triste, solitario y final\",\n            \"authorName\": \"Osvaldo Soriano\",\n            \"genre\": \"STORY\",\n            \"releaseYear\": 1973,\n            \"amountOfPages\": 187,\n            \"priceInPesos\": 999\n        }"
+				},
+				"url": {
+					"raw": "localhost:8080/new",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addBook20",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "      {\n            \"name\": \"El juego del angel\",\n            \"authorName\": \"Carlos Ruiz Zafon\",\n            \"genre\": \"STORY\",\n            \"releaseYear\": 2997,\n            \"amountOfPages\": 624,\n            \"priceInPesos\": 999\n        }"
+				},
+				"url": {
+					"raw": "localhost:8080/new",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addBook21",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n            \"name\": \"Dune\",\n            \"authorName\": \"Frank Herbert\",\n            \"genre\":\"SCIFI\",\n            \"releaseYear\": 1965,\n            \"amountOfPages\": 734,\n            \"priceInPesos\": 999\n        }"
+				},
+				"url": {
+					"raw": "localhost:8080/new",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addBook22",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n            \"name\": \"Un mundo feliz\",\n            \"authorName\": \"Aldous Huxley\",\n            \"genre\":\"DYSTOPIAN\",\n            \"releaseYear\": 1932,\n            \"amountOfPages\": 256,\n            \"priceInPesos\": 999\n        }"
+				},
+				"url": {
+					"raw": "localhost:8080/new",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addBook23",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n            \"name\": \"1q84\",\n            \"authorName\": \"Haruki Murakami\",\n            \"genre\": \"STORY\",\n            \"releaseYear\": 2011,\n            \"amountOfPages\": 928,\n            \"priceInPesos\": 999\n        }"
+				},
+				"url": {
+					"raw": "localhost:8080/new",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addBook24",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "        {\n            \"name\": \"El cuenta de la criada\",\n            \"authorName\": \"Margaret Atwood\",\n            \"genre\":\"DYSTOPIAN\",\n            \"releaseYear\": 1985,\n            \"amountOfPages\": 416,\n            \"priceInPesos\": 999\n        }"
+				},
+				"url": {
+					"raw": "localhost:8080/new",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addBook25",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n            \"name\": \"la conjura de los necios\",\n            \"authorName\": \"John Kennedy Toole\",\n            \"genre\":\"COMEDY\",\n            \"releaseYear\": 1980,\n            \"amountOfPages\": 392,\n            \"priceInPesos\": 999\n        }"
+				},
+				"url": {
+					"raw": "localhost:8080/new",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addBook26",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n            \"name\": \"Los 7 locos\",\n            \"authorName\": \"Roberto Arlt\",\n            \"genre\":\"DRAMA\",\n            \"releaseYear\": 1929,\n            \"amountOfPages\": 264,\n            \"priceInPesos\": 999\n        }"
+				},
+				"url": {
+					"raw": "localhost:8080/new",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addBook27",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n            \"name\": \"Asi hablo Zaratustra\",\n            \"authorName\": \"Friedrich Nietzsche\",\n            \"genre\":\"ESSAY\",\n            \"releaseYear\": 1883,\n            \"amountOfPages\": 352,\n            \"priceInPesos\": 999\n        }"
+				},
+				"url": {
+					"raw": "localhost:8080/new",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addBook28",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n            \"name\": \"Hamlet\",\n            \"authorName\": \"William Shakespeare\",\n            \"genre\": \"THEATER\",\n            \"releaseYear\": 1609,\n            \"amountOfPages\": 236,\n            \"priceInPesos\": 999\n        }"
+				},
+				"url": {
+					"raw": "localhost:8080/new",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addBook29",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n            \"name\": \"Tuya\",\n            \"authorName\": \"William Shakespeare\",\n            \"genre\":\"DETECTIVESTORY\",\n            \"releaseYear\": 2005,\n            \"amountOfPages\": 192,\n            \"priceInPesos\": 999\n        }"
+				},
+				"url": {
+					"raw": "localhost:8080/new",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addBook30",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n            \"name\": \"El Tunel\",\n            \"authorName\": \"Ernesto Sabato\",\n            \"genre\":\"DETECTIVESTORY\",\n            \"releaseYear\": 1946,\n            \"amountOfPages\": 168,\n            \"priceInPesos\": 999\n        }"
+				},
+				"url": {
+					"raw": "localhost:8080/new",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addBook31",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n            \"name\": \"El Silmarillion\",\n            \"authorName\": \"J. R. R. Tolkien\",\n            \"genre\": \"FANTASTIC\",\n            \"releaseYear\": 1977,\n            \"amountOfPages\": 446,\n            \"priceInPesos\": 999\n        }"
+				},
+				"url": {
+					"raw": "localhost:8080/new",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addBook32",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n            \"name\": \"El señor de las moscas\",\n            \"authorName\": \"William Golding\",\n            \"genre\": \"DRAMA\",            \n            \"releaseYear\": 1954,\n            \"amountOfPages\": 224,\n            \"priceInPesos\": 999\n        }"
+				},
+				"url": {
+					"raw": "localhost:8080/new",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addBook33",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n            \"name\": \"Juego de Tronos\",\n            \"authorName\": \"George R. R. Martin\",\n            \"genre\": \"FANTASTIC\",\n            \"releaseYear\": 1996,\n            \"amountOfPages\": 694,\n            \"priceInPesos\": 999\n        }"
+				},
+				"url": {
+					"raw": "localhost:8080/new",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addBook34",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n            \"name\": \"Cien años de soledad\",\n            \"authorName\": \"Gabriel Garcia Marquez\",\n            \"genre\": \"FANTASTIC\",\n            \"releaseYear\": 1976,\n            \"amountOfPages\": 694,\n            \"priceInPesos\": 999\n        }"
+				},
+				"url": {
+					"raw": "localhost:8080/new",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addBook35",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n            \"name\": \"El amor en los tiempos del colera\",\n            \"authorName\": \"Gabriel Garcia Marquez\",\n            \"genre\": \"FANTASTIC\",\n            \"releaseYear\": 1976,\n            \"amountOfPages\": 694,\n            \"priceInPesos\": 999\n        }"
+				},
+				"url": {
+					"raw": "localhost:8080/new",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addBook36",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n            \"name\": \"20 poemas de amor y una cancion desesperada\",\n            \"authorName\": \"Pablo Neruda\",\n            \"genre\": \"POETRY\",\n            \"releaseYear\": 1976,\n            \"amountOfPages\": 694,\n            \"priceInPesos\": 999\n        }"
+				},
+				"url": {
+					"raw": "localhost:8080/new",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addBook37",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n            \"name\": \"IT\",\n            \"authorName\": \"Stephen King\",\n            \"genre\": \"TERROR\",\n            \"releaseYear\": 1976,\n            \"amountOfPages\": 694,\n            \"priceInPesos\": 999\n        }"
+				},
+				"url": {
+					"raw": "localhost:8080/new",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addBook38",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n            \"name\": \"Oryx y Crake\",\n            \"authorName\": \"Margaret Atwood\",\n            \"genre\": \"SCIFI\",\n            \"releaseYear\": 1976,\n            \"amountOfPages\": 694,\n            \"priceInPesos\": 999\n        }"
+				},
+				"url": {
+					"raw": "localhost:8080/new",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addBook39",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n            \"name\": \"Todos los fuegos, el fuego\",\n            \"authorName\": \"Julio Cortazar\",\n            \"genre\": \"STORY\",\n            \"releaseYear\": 1976,\n            \"amountOfPages\": 694,\n            \"priceInPesos\": 999\n        }"
+				},
+				"url": {
+					"raw": "localhost:8080/new",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addBook40",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n            \"name\": \"El principe\",\n            \"authorName\": \"Nicolas Maquiavelo\",\n            \"genre\": \"STORY\",\n            \"releaseYear\": 1976,\n            \"amountOfPages\": 694,\n            \"priceInPesos\": 999\n        }"
+				},
+				"url": {
+					"raw": "localhost:8080/new",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"new"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "e233e3a5-a285-4d6c-8cac-86dbed6f7f0e",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "5fac5b00-7191-47aa-b33f-427a4814143f",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
