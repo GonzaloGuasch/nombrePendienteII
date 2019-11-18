@@ -24,7 +24,7 @@ class OpinionController(var opinionService : OpinionService) {
     fun findAll() = opinionService.findAll()
 
     @RequestMapping("/op_book/{id}")
-    fun findByBook(@PathVariable id : Long) : MutableList<Opinion> = opinionService.findByBook(id)
+    fun findByBook(@PathVariable id : Long) = opinionService.findByBook(id)
 
     @RequestMapping("/op_user/{id}")
     fun findByUser(@PathVariable id : Long) = opinionService.findByUser(id)

@@ -4,6 +4,7 @@ import java.time.LocalDateTime
 import javax.persistence.*
 
 @Entity
+@Table(name="opinion")
 data class Opinion(@JoinColumn(name = "id_user", nullable = false)
                    @ManyToOne(optional = false, cascade = [], fetch = FetchType.EAGER)
                    val user : User,
