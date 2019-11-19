@@ -24,4 +24,12 @@ class BookAppService(var bookAppRepository: BookAppRepository, var bookRepositor
         user.addBookToWishList(book)
         return user
     }
+
+    fun findByname(bookApp: BookApp, username: String): Any {
+       return bookApp.findUser(username);
+    }
+
+    fun getAllUsers(bookApp: BookApp): MutableList<User> {
+        return bookApp.getAllUser()
+    }
 }

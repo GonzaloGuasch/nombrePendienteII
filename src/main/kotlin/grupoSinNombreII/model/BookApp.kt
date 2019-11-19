@@ -26,7 +26,11 @@ class BookApp(
     }
 
     fun findUser(username: String): User {
-       return this.registedUsers.find { it.userName == username }!!
+     return this.registedUsers.find { it.userName == username }!!
+    }
+
+    fun getAllUser(): MutableList<User> {
+        return this.registedUsers
     }
 
 }

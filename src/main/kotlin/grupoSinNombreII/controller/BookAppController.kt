@@ -26,4 +26,10 @@ class BookAppController(var bookAppService: BookAppService) {
 
     @PostMapping("/addToWishlist")
     fun addToWishList(@RequestBody wishlistWrapper: WishListWrapper) = bookAppService.addToWishList(this.bookApp, wishlistWrapper)
+
+    @GetMapping("/getUser/{username}")
+    fun getUser(@PathVariable username: String ) = bookAppService.findByname(this.bookApp, username)
+
+    @GetMapping("/all")
+    fun getAllUser() = bookAppService.getAllUsers(this.bookApp)
 }
