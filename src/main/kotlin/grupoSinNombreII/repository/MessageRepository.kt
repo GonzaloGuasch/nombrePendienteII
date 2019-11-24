@@ -8,6 +8,4 @@ import org.springframework.web.bind.annotation.RequestParam
 
 interface MessageRepository: CrudRepository<Message, Long> {
 
-    @Query("SELECT * FROM message WHERE lower(name) = :lower(aName)", nativeQuery = true )
-    fun findByName(@RequestParam("aName") aName : String)
 }

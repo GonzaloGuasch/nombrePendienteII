@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*
 @RequestMapping("/message")
 class MessageController(var messageService : MessageService) {
 
-    @RequestMapping("/")
+    @RequestMapping("/test")
     fun index(): String = "Working"
 
     @PostMapping("/new")
@@ -21,8 +21,5 @@ class MessageController(var messageService : MessageService) {
     fun findById(@PathVariable id: Long) = messageService.findById(id)
 
     @GetMapping("/messages")
-    fun findAllBooks() = messageService.findAll()
-
-    @GetMapping("/name/{name}")
-    fun findByName(@PathVariable name: String) = messageService.findByName(name)
+    fun findAllMessages() = messageService.findAll()
 }
