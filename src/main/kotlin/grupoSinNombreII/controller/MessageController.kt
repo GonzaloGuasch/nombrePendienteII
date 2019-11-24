@@ -21,5 +21,6 @@ class MessageController(var messageService : MessageService) {
     fun findById(@PathVariable id: Long) = messageService.findById(id)
 
     @GetMapping("/messages")
+    
     fun findAllMessages() = messageService.findAll()
 }
