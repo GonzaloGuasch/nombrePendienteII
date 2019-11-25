@@ -1,6 +1,12 @@
 package grupoSinNombreII.service
 
-import grupoSinNombreII.model.*
+import grupoSinNombreII.model.LoginWrapper
+import grupoSinNombreII.model.BookApp
+import grupoSinNombreII.model.RegisterWrapper
+import grupoSinNombreII.model.User
+import grupoSinNombreII.model.WishListWrapper
+import grupoSinNombreII.model.Book
+import grupoSinNombreII.model.SaldoWrapper
 import grupoSinNombreII.repository.BookAppRepository
 import grupoSinNombreII.repository.BookRepository
 import grupoSinNombreII.repository.UserRepository
@@ -48,5 +54,11 @@ class BookAppService(var bookAppRepository: BookAppRepository,
         val book: Book = this.bookRepository.findByName(wishlistWrapper.bookName)!!
         user.addToCarrito(book)
         return user
+    }
+
+    fun comprar(bookApp: BookApp, username: String): User {
+        val user = this.findByname(bookApp, username)
+        user.comprar()
+        return user;
     }
 }

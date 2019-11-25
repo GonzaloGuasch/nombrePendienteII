@@ -35,4 +35,7 @@ class BookAppController(var bookAppService: BookAppService) {
 
     @PostMapping("agregarACarrito")
     fun addToCarrito(@RequestBody wishlistWrapper: WishListWrapper) = bookAppService.addToCarrito(this.bookApp, wishlistWrapper);
+
+    @PostMapping("/comprar")
+    fun comprar(@RequestBody username: String) = bookAppService.comprar(this.bookApp, username);
 }
