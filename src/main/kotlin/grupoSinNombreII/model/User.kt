@@ -11,6 +11,7 @@ class User(
         var wishlist: MutableSet<Book> = mutableSetOf(),
         @Id @GeneratedValue
         var id: Long = 0,
+        var saldo: Long = 0,
         var password: String? = ""
 ) {
     fun addBookToWishList(book: Book) {
@@ -18,5 +19,9 @@ class User(
     }
     fun setPassWord(newPassword: String){
         this.password = newPassword
+    }
+
+    fun agregarSaldo(saldoParaSerAgregado: Long) {
+        this.saldo += saldoParaSerAgregado
     }
 }
