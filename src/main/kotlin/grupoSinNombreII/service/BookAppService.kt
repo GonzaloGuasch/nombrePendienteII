@@ -42,4 +42,11 @@ class BookAppService(var bookAppRepository: BookAppRepository,
         userByName.agregarSaldo(saldoWrapper.saldo)
         return userByName
     }
+
+    fun addToCarrito(bookApp: BookApp, wishlistWrapper: WishListWrapper): Any {
+        val user: User = bookApp.findUser(wishlistWrapper.username)
+        val book: Book = this.bookRepository.findByName(wishlistWrapper.bookName)!!
+        user.addToCarrito(book)
+        return user
+    }
 }

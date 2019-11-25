@@ -32,4 +32,7 @@ class BookAppController(var bookAppService: BookAppService) {
 
     @PostMapping("/addSaldo")
     fun addSaldo(@RequestBody saldoWrapper: SaldoWrapper) = bookAppService.addSaldoToUser(this.bookApp, saldoWrapper)
+
+    @PostMapping("agregarACarrito")
+    fun addToCarrito(@RequestBody wishlistWrapper: WishListWrapper) = bookAppService.addToCarrito(this.bookApp, wishlistWrapper);
 }

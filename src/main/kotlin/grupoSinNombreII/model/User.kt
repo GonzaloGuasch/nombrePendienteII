@@ -9,6 +9,9 @@ class User(
         @ElementCollection
         @ManyToMany(cascade = [CascadeType.ALL], mappedBy = "id")
         var wishlist: MutableSet<Book> = mutableSetOf(),
+        @ElementCollection
+        @ManyToMany(cascade = [CascadeType.ALL], mappedBy = "id")
+        var carrito: MutableSet<Book> = mutableSetOf(),
         @Id @GeneratedValue
         var id: Long = 0,
         var saldo: Long = 0,
@@ -23,5 +26,9 @@ class User(
 
     fun agregarSaldo(saldoParaSerAgregado: Long) {
         this.saldo += saldoParaSerAgregado
+    }
+
+    fun addToCarrito(book: Book) {
+        this.carrito.add(book)
     }
 }
