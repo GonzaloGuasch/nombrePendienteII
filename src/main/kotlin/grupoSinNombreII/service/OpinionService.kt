@@ -22,4 +22,8 @@ class OpinionService(private val opinionRepository: OpinionRepository) {
     fun findByUser(aId : Long) = opinionRepository.findByUser(aId)
 
     fun findEspecific(id_book : Long, id_user : Long) = opinionRepository.findEspecific(id_book, id_user)
+
+    fun deleteById(id: Long) {
+        opinionRepository.deleteById(id)
+    }
 }
