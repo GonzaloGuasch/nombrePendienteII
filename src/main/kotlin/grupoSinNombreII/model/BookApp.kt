@@ -4,7 +4,8 @@ import javax.persistence.*
 
 @Entity
 class BookApp(
-        @OneToMany(cascade = [CascadeType.ALL], mappedBy = "id")
+        @JoinColumn(name= "user_id")
+        @OneToMany(cascade = [CascadeType.ALL])
         private val registedUsers: MutableList<User>  = mutableListOf(),
         @Id @GeneratedValue
         private var id: Long = 0

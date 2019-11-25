@@ -1,9 +1,6 @@
 package grupoSinNombreII.controller
 
-import grupoSinNombreII.model.BookApp
-import grupoSinNombreII.model.LoginWrapper
-import grupoSinNombreII.model.RegisterWrapper
-import grupoSinNombreII.model.WishListWrapper
+import grupoSinNombreII.model.*
 import grupoSinNombreII.service.BookAppService
 import org.springframework.web.bind.annotation.*
 
@@ -32,4 +29,10 @@ class BookAppController(var bookAppService: BookAppService) {
 
     @GetMapping("/all")
     fun getAllUser() = bookAppService.getAllUsers(this.bookApp)
+
+    @PostMapping("/addSaldo")
+    fun addSaldo(@RequestBody saldoWrapper: SaldoWrapper) = bookAppService.addSaldoToUser(this.bookApp, saldoWrapper)
+
+    @PostMapping("agregarACarrito")
+    fun addToCarrito(@RequestBody wishlistWrapper: WishListWrapper) = bookAppService.addToCarrito(this.bookApp, wishlistWrapper);
 }
