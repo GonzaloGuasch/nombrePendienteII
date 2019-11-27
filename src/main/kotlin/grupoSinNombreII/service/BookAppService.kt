@@ -1,6 +1,12 @@
 package grupoSinNombreII.service
 
-import grupoSinNombreII.model.*
+
+import grupoSinNombreII.model.LoginWrapper
+import grupoSinNombreII.model.RegisterWrapper
+import grupoSinNombreII.model.User
+import grupoSinNombreII.model.WishListWrapper
+import grupoSinNombreII.model.Book
+import grupoSinNombreII.model.SaldoWrapper
 import grupoSinNombreII.repository.BookRepository
 import grupoSinNombreII.repository.UserRepository
 import org.springframework.stereotype.Service
@@ -51,5 +57,11 @@ class BookAppService(var bookRepository: BookRepository,
         user.addToCarrito(book)
         this.userRepository.save(user);
         return user
+    }
+
+    fun comprar(username: String): User {
+        val user = this.findByname(username)
+        user.comprar()
+        return user;
     }
 }
