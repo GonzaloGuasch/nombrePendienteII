@@ -15,14 +15,14 @@ class BookAppController(var bookAppService: BookAppService) {
     fun index(): String = "Book app controller funca"
 
     @PostMapping("/login")
-    fun canLogin(@RequestBody loginWrapper: LoginWrapper) = bookAppService.canLogin(this.bookApp, loginWrapper)
+    fun canLogin(@RequestBody loginWrapper: LoginWrapper) = bookAppService.canLogin(loginWrapper)
 
     @PostMapping("/register")
     @ResponseBody
     fun register(@RequestBody registerWrapper: RegisterWrapper) = bookAppService.register(this.bookApp, registerWrapper)
 
     @PostMapping("/addToWishlist")
-    fun addToWishList(@RequestBody wishlistWrapper: WishListWrapper) = bookAppService.addToWishList(this.bookApp, wishlistWrapper)
+    fun addToWishList(@RequestBody wishlistWrapper: WishListWrapper) = bookAppService.addToWishList(wishlistWrapper)
 
     @GetMapping("/getUser/{username}")
     fun getUser(@PathVariable username: String ) = bookAppService.findByname(this.bookApp, username)

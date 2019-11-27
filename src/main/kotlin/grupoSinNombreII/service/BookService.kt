@@ -17,15 +17,17 @@ class BookService(var bookRepository: BookRepository) {
 
     fun findByAuthorName(name : String) = bookRepository.findByAuthorName(name.toLowerCase())
 
-    fun upVoteBook(id: Long) {
-       var recoverBook = this.findById(id).get();
+    fun upVoteBook(id: Long): Book{
+       val recoverBook = this.findById(id).get();
         recoverBook.upVote();
         this.create(recoverBook);
+        return recoverBook;
     }
 
-    fun downVoteBook(id: Long) {
-        var recoverBook = this.findById(id).get();
+    fun downVoteBook(id: Long): Book {
+        val recoverBook = this.findById(id).get();
         recoverBook.downVote();
         this.create(recoverBook);
+        return recoverBook;
     }
 }
