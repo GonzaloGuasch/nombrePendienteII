@@ -9,8 +9,6 @@ import org.springframework.web.bind.annotation.*
 @RequestMapping("/app")
 class BookAppController(var bookAppService: BookAppService) {
 
-    private var bookApp: BookApp = BookApp()
-
     @RequestMapping("/")
     fun index(): String = "Book app controller funca"
 
@@ -19,20 +17,20 @@ class BookAppController(var bookAppService: BookAppService) {
 
     @PostMapping("/register")
     @ResponseBody
-    fun register(@RequestBody registerWrapper: RegisterWrapper) = bookAppService.register(this.bookApp, registerWrapper)
+    fun register(@RequestBody registerWrapper: RegisterWrapper) = bookAppService.register(registerWrapper)
 
     @PostMapping("/addToWishlist")
     fun addToWishList(@RequestBody wishlistWrapper: WishListWrapper) = bookAppService.addToWishList(wishlistWrapper)
 
     @GetMapping("/getUser/{username}")
-    fun getUser(@PathVariable username: String ) = bookAppService.findByname(this.bookApp, username)
+    fun getUser(@PathVariable username: String ) = bookAppService.findByname(username)
 
     @GetMapping("/all")
-    fun getAllUser() = bookAppService.getAllUsers(this.bookApp)
+    fun getAllUser() = bookAppService.getAllUsers()
 
     @PostMapping("/addSaldo")
-    fun addSaldo(@RequestBody saldoWrapper: SaldoWrapper) = bookAppService.addSaldoToUser(this.bookApp, saldoWrapper)
+    fun addSaldo(@RequestBody saldoWrapper: SaldoWrapper) = bookAppService.addSaldoToUser(saldoWrapper)
 
     @PostMapping("agregarACarrito")
-    fun addToCarrito(@RequestBody wishlistWrapper: WishListWrapper) = bookAppService.addToCarrito(this.bookApp, wishlistWrapper);
+    fun addToCarrito(@RequestBody wishlistWrapper: WishListWrapper) = bookAppService.addToCarrito(wishlistWrapper);
 }

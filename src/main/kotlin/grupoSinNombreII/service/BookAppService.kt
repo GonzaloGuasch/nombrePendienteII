@@ -1,14 +1,12 @@
 package grupoSinNombreII.service
 
 import grupoSinNombreII.model.*
-import grupoSinNombreII.repository.BookAppRepository
 import grupoSinNombreII.repository.BookRepository
 import grupoSinNombreII.repository.UserRepository
 import org.springframework.stereotype.Service
 
 @Service
-class BookAppService(var bookAppRepository: BookAppRepository,
-                     var bookRepository: BookRepository,
+class BookAppService(var bookRepository: BookRepository,
                      var userRepository: UserRepository){
 
     fun canLogin(loginWrapper: LoginWrapper): Boolean {
@@ -17,11 +15,11 @@ class BookAppService(var bookAppRepository: BookAppRepository,
 
     }
 
-    fun register(bookApp: BookApp, registerWrapper: RegisterWrapper): User {
-        var newUser = User(registerWrapper.name!!, registerWrapper.email!!, registerWrapper.birth!!)
-        val userWithPassword =  bookApp.registerUser(newUser, registerWrapper.password!!)
-        this.userRepository.save(userWithPassword)
-        return userWithPassword
+    fun register(registerWrapper: RegisterWrapper): User {
+        val newUser = User(registerWrapper.name!!, registerWrapper.email!!, registerWrapper.birth!!)
+        newUser.setPassWord(registerWrapper.password!!);
+        this.userRepository.save(newUser)
+        return newUser
     }
 
     fun addToWishList(wishlistWrapper: WishListWrapper): User {
@@ -32,24 +30,26 @@ class BookAppService(var bookAppRepository: BookAppRepository,
         return user
     }
 
-    fun findByname(bookApp: BookApp, username: String): User {
-       return bookApp.findUser(username);
+    fun findByname(username: String): User {
+       return this.userRepository.findByName(username);
     }
 
-    fun getAllUsers(bookApp: BookApp): MutableList<User> {
-        return bookApp.getAllUser()
+    fun getAllUsers(): MutableList<User> {
+        return this.userRepository.findAll().toMutableList();
     }
 
-    fun addSaldoToUser(bookApp: BookApp, saldoWrapper: SaldoWrapper): User {
-        val userByName = this.findByname(bookApp, saldoWrapper.username)
+    fun addSaldoToUser(saldoWrapper: SaldoWrapper): User {
+        val userByName = this.findByname(saldoWrapper.username)
         userByName.agregarSaldo(saldoWrapper.saldo)
+        this.userRepository.save(userByName)
         return userByName
     }
 
-    fun addToCarrito(bookApp: BookApp, wishlistWrapper: WishListWrapper): Any {
-        val user: User = bookApp.findUser(wishlistWrapper.username)
+    fun addToCarrito(wishlistWrapper: WishListWrapper): User {
+        val user: User = this.findByname(wishlistWrapper.username)
         val book: Book = this.bookRepository.findByName(wishlistWrapper.bookName)!!
         user.addToCarrito(book)
+        this.userRepository.save(user);
         return user
     }
 }
