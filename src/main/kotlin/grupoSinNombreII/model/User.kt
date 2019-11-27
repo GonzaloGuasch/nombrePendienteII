@@ -31,4 +31,11 @@ class User(
     fun addToCarrito(book: Book) {
         this.carrito.add(book)
     }
+
+    fun comprar() {
+        var res = 0;
+        this.carrito.forEach { it  -> res += it.priceInPesos  }
+        this.saldo -= res;
+        this.carrito = mutableSetOf();
+    }
 }

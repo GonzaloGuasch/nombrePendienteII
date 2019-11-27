@@ -31,4 +31,9 @@ class OpinionController(var opinionService : OpinionService) {
 
     @RequestMapping("/find_especific/{id_book}/{id_user}")
     fun findEspecific(@PathVariable id_book : Long, @PathVariable id_user : Long) = opinionService.findEspecific(id_book, id_user)
+
+    @DeleteMapping("/delete/{id}")
+    fun deleteOpinion(@PathVariable id : Long) {
+        opinionService.deleteById(id);
+    }
 }
