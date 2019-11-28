@@ -62,6 +62,7 @@ class BookAppService(var bookRepository: BookRepository,
     fun comprar(username: String): User {
         val user = this.findByname(username)
         user.comprar()
+        this.userRepository.save(user)
         return user;
     }
 }
