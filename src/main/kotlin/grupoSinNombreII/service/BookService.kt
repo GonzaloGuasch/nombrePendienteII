@@ -30,4 +30,18 @@ class BookService(var bookRepository: BookRepository) {
         this.create(recoverBook);
         return recoverBook;
     }
+
+    fun agregarStock(stockParaAgregar: Int, bookname: String): Book {
+        val bookRecuperado: Book = this.findByName(bookname)!!
+        bookRecuperado.agregarStock(stockParaAgregar)
+        this.bookRepository.save(bookRecuperado)
+        return bookRecuperado
+    }
+
+    fun quitarStcok(stockParaQuitar: Int, bookname: String): Book{
+        val bookRecuperado: Book = this.findByName(bookname)!!
+        bookRecuperado.quitarStcok(stockParaQuitar)
+        this.bookRepository.save(bookRecuperado)
+        return bookRecuperado
+    }
 }

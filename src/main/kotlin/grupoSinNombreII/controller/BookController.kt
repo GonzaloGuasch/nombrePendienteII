@@ -30,4 +30,10 @@ class BookController(val bookService: BookService) {
 
     @GetMapping("/downvote/{id}")
     fun downvote(@PathVariable id: Long) = bookService.downVoteBook(id);
+
+    @PostMapping("agregarStock/{bookname}")
+    fun agregarStock(@RequestBody stockParaAgregar: Int, @PathVariable bookname: String) = bookService.agregarStock(stockParaAgregar, bookname)
+
+    @PostMapping("quitarStock/{bookname}")
+    fun quitarStock(@RequestBody stockParaAgregar: Int, @PathVariable bookname: String) = bookService.quitarStcok(stockParaAgregar, bookname)
 }
