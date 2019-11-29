@@ -31,13 +31,13 @@ class BookService(var bookRepository: BookRepository) {
         return recoverBook;
     }
 
-    fun agregarStock(stockParaAgregar: Int, bookname: String): Book {
+    fun agregarStock(stockParaAgregar: Long, bookname: String): Book {
         val bookRecuperado: Book = this.findByName(bookname)!!
         bookRecuperado.agregarStock(stockParaAgregar)
         this.bookRepository.save(bookRecuperado)
         return bookRecuperado
     }
-
+    
     fun quitarStcok(stockParaQuitar: Int, bookname: String): Book{
         val bookRecuperado: Book = this.findByName(bookname)!!
         bookRecuperado.quitarStcok(stockParaQuitar)

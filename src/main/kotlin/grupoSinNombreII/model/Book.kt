@@ -13,7 +13,7 @@ class Book(
         var amountOfPages: Int,
         var priceInPesos: Int,
         var votes: Int = 0,
-        var stock: Int = 0,
+        var stock: Long = 0,
         @Id @GeneratedValue
         val id: Long = 0
 ) {
@@ -25,7 +25,7 @@ class Book(
                 this.votes = this.votes - 1
         }
 
-        fun agregarStock(stockParaAgregar: Int) {
+        fun agregarStock(stockParaAgregar: Long) {
                 this.stock += stockParaAgregar;
         }
         fun quitarStcok(stockParaQuitar: Int){
