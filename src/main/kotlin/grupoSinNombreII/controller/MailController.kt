@@ -19,13 +19,9 @@ class MailController {
 
     fun sendEmail(mailWrapper: MailWrapper){
         val nuevoMail = SimpleMailMessage()
-        val message =   "Gracias por elegirnos \n" +
-                        "el libro ${mailWrapper.bookname} llegara pronto ;) \n" +
-                        "Saludos. Book 9-3/4!"
-
         nuevoMail.setTo(mailWrapper.to)
-        nuevoMail.setSubject("Compra exitosa!")
-        nuevoMail.setText(message)
+        nuevoMail.setSubject(mailWrapper.subject!!)
+        nuevoMail.setText(mailWrapper.message!!)
 
         javaMailSender.send(nuevoMail)
     }
