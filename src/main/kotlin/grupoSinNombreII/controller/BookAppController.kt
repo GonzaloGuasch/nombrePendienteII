@@ -31,10 +31,11 @@ class BookAppController(var bookAppService: BookAppService) {
     @PostMapping("/addSaldo")
     fun addSaldo(@RequestBody saldoWrapper: SaldoWrapper) = bookAppService.addSaldoToUser(saldoWrapper)
 
-    @PostMapping("agregarACarrito")
+    @PostMapping("/agregarACarrito")
     fun addToCarrito(@RequestBody wishlistWrapper: WishListWrapper) = bookAppService.addToCarrito(wishlistWrapper);
 
+    @CrossOrigin
     @PostMapping("/comprar")
-    fun comprar(@RequestBody username: String) = bookAppService.comprar(username);
+    fun comprar(@RequestBody username: UserName) = bookAppService.comprar(username.username)
 
 }
