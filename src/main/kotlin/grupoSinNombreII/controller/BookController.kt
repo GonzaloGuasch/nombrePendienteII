@@ -36,4 +36,18 @@ class BookController(val bookService: BookService) {
 
     @PostMapping("quitarStock/{bookname}")
     fun quitarStock(@RequestBody stock: Int, @PathVariable bookname: String) = bookService.quitarStcok(stock, bookname)
+
+    @GetMapping("/top")
+    fun topN() : MutableList<Book>{
+        var res = bookService.topN()
+        var n = res.size
+        var pivot = n
+        if(n >= 4) {
+            pivot = 4
+        }
+        else{
+            pivot -= 1
+        }
+        return res.subList(0, pivot)
+    }
 }

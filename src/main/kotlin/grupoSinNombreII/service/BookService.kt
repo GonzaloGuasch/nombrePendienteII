@@ -44,4 +44,6 @@ class BookService(var bookRepository: BookRepository) {
         this.bookRepository.save(bookRecuperado)
         return bookRecuperado
     }
+
+    fun topN() = bookRepository.topN()
 }
